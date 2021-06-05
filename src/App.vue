@@ -1,17 +1,24 @@
 <template>
   <div id="app">
+    <Instagram/>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <KakaoMap/>
+    <img alt="Home Drawing" src="./assets/drawing.png">
+    <Recipes/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import KakaoMap from './components/KakaoMap.vue'
+import Instagram from './components/Instagram.vue'
+import Recipes from './components/Recipes.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Recipes,
+    KakaoMap,
+    Instagram
   }
 }
 </script>
