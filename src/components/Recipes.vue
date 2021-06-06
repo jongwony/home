@@ -1,73 +1,100 @@
 <template>
   <div class="recipes">
-    <section>
-      <b-card-group id="youtube" columns>
+    <b-row cols="3" style="padding:30px">
+      <b-col v-for="(images, idx) in zipImages" :key="idx" col no-gutters>
+
         <b-card
-          no-body
-          style="max-width: 25rem;"
-          v-for="embed in embeds"
-          :key="embed.id"
+            v-for="image in images" :key=image.src
+            :img-src="require(`@/assets/${image.src}`)"
+            :bg-variant="image.signature ? image.signature : undefined"
+            :text-variant="image.signature ? 'white' : undefined"
+            class="mb-3"
         >
-          <template v-slot:header>
-            <b-embed
-              type="iframe"
-              aspect="16by9"
-              :src="'https://www.youtube.com/embed/' + embed.id"
-              allowfullscreen
-            ></b-embed>
+          <b-card-title>{{ image.title }}</b-card-title>
+          <b-card-sub-title v-if="image.subtitle" :sub-title-text-variant="image.signature ? 'secondary' : undefined">
+            {{ image.subtitle }}
+          </b-card-sub-title>
+          <b-card-text>
+            {{ image.description }}
+          </b-card-text>
+          <template #footer v-if="image.footer">
+            <small class="text-muted">{{ image.footer }}</small>
           </template>
-
-          <b-card-body>
-            <b-card-title>{{ embed.title }}</b-card-title>
-            <b-card-sub-title v-if="embed.subtitle" class="mb-2">{{ embed.subtitle }}</b-card-sub-title>
-            <b-card-text>
-              {{ embed.description }}
-            </b-card-text>
-          </b-card-body>
-
-          <b-card-body v-if="embed.downloads">
-            <b-button variant="outline-danger">{{ embed.downloads }}</b-button>
-            <b-button variant="outline-primary">{{ embed.downloads }}</b-button>
-          </b-card-body>
-
-          <b-card-footer v-if="embed.footer">{{ embed.footer }}</b-card-footer>
-
         </b-card>
-      </b-card-group>
-    </section>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
-  export default {
-    name: "Recipes",
-    data() {
-      return {
-        embeds: []
+export default {
+  name: "Recipes",
+  data() {
+    return {
+      images: []
+    }
+  },
+  created() {
+    let vm = this
+    vm.images = [
+      {
+        src: 'salmon_rice_bowl.jpg',
+        title: '사케동',
+        signature: 'dark',
+        subtitle: '시그니처 메뉴',
+        description: '실패한적 없음',
+        footer: '노르웨이에서 오니 이틀 전 예약 필요',
+      },
+      {
+        src: 'mille_feuille_nabe.jpg',
+        title: '밀푀유나베',
+        description: '비주얼 최고 실패율 적음',
+        footer: '싱거웠던 적 있음',
+      },
+      {
+        src: 'shabushabu.jpg',
+        title: '샤브샤브',
+        description: '굴소스 그는 신인가!! 굴소스 그는 신인가!! 굴소스 그는 신인가!!',
+        footer: '비주얼은 이래도 맛있었음',
+      },
+      {
+        src: 'stir_fried_pork.jpg',
+        title: '고추잡채',
+        description: '간단하고 빠르게 대용량 만들 수 있음',
+        footer: '처음 했을 때도 평이 좋았음',
+      },
+      {
+        src: 'liege_waffle.jpg',
+        title: '리에주 와플',
+        description: '와플은 딱딱해야지',
+        footer: '발효가 필요해서 1시간 전에 해야함',
       }
-    },
-    created() {
-      let vm = this
-      this.$http
-        .get('https://wr6wm9szy5.execute-api.ap-northeast-2.amazonaws.com/api/youtube')
-        .then(function (response) {
-          vm.embeds = response.data.filter(k => k.privacy !== 'private')
-        }).catch(function () {
-        vm.embeds = [
-          {id: '1fwRzD1INZw', title: '😕', description: '최신 영상을 불러오지 못했어요!', privacy: "public"},
-          {id: 'Tx2cGzsPSlc', title: '😕', description: '최신 영상을 불러오지 못했어요!', privacy: "private"},
-          {id: 'yW7K20UUx5c', title: '😕', description: '최신 영상을 불러오지 못했어요!'}
-        ].filter(k => k.privacy !== 'private')
-      })
+    ]
+  },
+  computed: {
+    zipImages() {
+      return this.images.reduce((c, n, i) => {
+        if (i % (Math.ceil(this.images.length / 3)) === 0) c.push([]);
+        c[c.length - 1].push(n);
+        return c;
+      }, []);
     }
   }
+}
 </script>
 
 <style scoped>
-  .about-section h1 {
-    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif, serif;
-    padding: 7px 15px;
-    font-weight: bold;
-  }
+img {
+  max-width: 300px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-deck .card {
+  max-width: 300px;
+  position: relative;
+  display: grid;
+}
 
 </style>

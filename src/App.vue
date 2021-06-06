@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Instagram/>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="@/assets/logo.png">
     <KakaoMap/>
-    <img alt="Home Drawing" src="./assets/drawing.png">
+    <img alt="Home Drawing" src="@/assets/drawing.png">
     <Recipes/>
   </div>
 </template>
