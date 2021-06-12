@@ -1,30 +1,28 @@
 <template>
-  <div class="recipes">
+  <div id="Recipes">
+    <h1>🍽️ 요리를 좋아합니다.</h1>
+    <hr>
     <div v-for="category in ['main', 'side', 'cocktail']" :key=category>
-      <h1 v-if="itemExists(category)">{{category}}</h1>
-      <hr>
-      <b-row cols="3" style="padding:30px">
-        <b-col v-for="(items, idx) in zipItem(category)" :key="idx" col no-gutters>
-          <b-card
-              v-for="item in items" :key=item.src
-              :img-src="require(`@/assets/${item.src}`)"
-              :bg-variant="item.signature ? item.signature : undefined"
-              :text-variant="item.signature ? 'white' : undefined"
-              class="mb-3"
-          >
-            <b-card-title>{{ item.title }}</b-card-title>
-            <b-card-sub-title v-if="item.subtitle" :sub-title-text-variant="item.signature ? 'secondary' : undefined">
-              {{ item.subtitle }}
-            </b-card-sub-title>
-            <b-card-text>
-              {{ item.description }}
-            </b-card-text>
-            <template #footer v-if="item.footer">
-              <small class="text-muted">{{ item.footer }}</small>
-            </template>
-          </b-card>
-        </b-col>
-      </b-row>
+      <b-card-group v-for="(items, idx) in zipItem(category)" :key="idx" columns>
+        <b-card
+            v-for="item in items" :key=item.src
+            :img-src="require(`@/assets/${item.src}`)"
+            :bg-variant="item.signature ? item.signature : undefined"
+            :text-variant="item.signature ? 'white' : undefined"
+            class="mb-3"
+        >
+          <b-card-title>{{ item.title }}</b-card-title>
+          <b-card-sub-title v-if="item.subtitle" :sub-title-text-variant="item.signature ? 'secondary' : undefined">
+            {{ item.subtitle }}
+          </b-card-sub-title>
+          <b-card-text>
+            {{ item.description }}
+          </b-card-text>
+          <template #footer v-if="item.footer">
+            <small class="text-muted">{{ item.footer }}</small>
+          </template>
+        </b-card>
+      </b-card-group>
     </div>
   </div>
 </template>
@@ -100,6 +98,10 @@ export default {
 </script>
 
 <style scoped>
+#Recipes {
+  margin-top: 120px;
+}
+
 img {
   max-width: 300px;
   display: flex;
@@ -107,10 +109,12 @@ img {
   margin-right: auto;
 }
 
-.card-deck .card {
+.card-columns {
   max-width: 300px;
+  padding: 20px;
   position: relative;
-  display: grid;
+  display: inline-block;
+  overflow: auto;
 }
 
 </style>

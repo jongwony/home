@@ -1,9 +1,8 @@
 <template>
-  <div class="instagram">
+  <div id="Gallery">
     <!-- carousel part-->
     <section>
       <b-carousel
-          id="gallery"
           v-model="slide"
           :interval="5000"
           fade
@@ -39,17 +38,26 @@ export default {
     }
   },
   created() {
-    let vm = this
-    vm.images = [
-      {'media_url': "//picsum.photos/1024/480/?image=54", caption: "😕 최신 이미지를 못가져왔어요1"},
-      {'media_url': "//picsum.photos/1024/480/?image=58", caption: "😕 최신 이미지를 못가져왔어요2"},
-    ]
+    let vm = this;
+    let instagram_url = 'https://9e240d7v0k.execute-api.ap-northeast-2.amazonaws.com/api/instagram'
+    if (process.env.NODE_ENV === 'development') {
+      instagram_url = 'http://localhost:8000/instagram'
+    }
+    this.$http
+        .get(instagram_url)
+        .then(function (response) {
+          vm.images = response.data.filter(
+              x => x.caption && x.media_type !== 'VIDEO' && x.caption.includes('#home')
+          )
+        });
   },
   methods: {
-    onSlideStart() {
+    onSlideStart(slide) {
+      console.log(slide)
       this.sliding = true
     },
-    onSlideEnd() {
+    onSlideEnd(slide) {
+      console.log(slide)
       this.sliding = false
     }
   }
@@ -57,8 +65,10 @@ export default {
 </script>
 
 <style scoped>
-.instagram {
-  margin-top: 56px;
+
+#Gallery {
+  margin: auto;
+  max-width: 800px;
 }
 
 .about-section h1 {

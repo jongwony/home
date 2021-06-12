@@ -1,7 +1,10 @@
 <template>
-  <div>
+  <div id="Location">
+    <h1>🗺️ 오시는길</h1>
+    <p>석촌고분역 1번 출구 - 근처에 다수의 따릉이가 있습니다.</p>
+    <hr>
     <div id="map"/>
-    <div id="roadview"></div>
+    <div id="roadview"/>
   </div>
 </template>
 
@@ -72,13 +75,23 @@ export default {
 </script>
 
 <style scoped>
+#Location {
+  margin-top: 120px;
+}
+
 #map {
   width: 100%;
+  max-width: 480px;
   height: 480px;
+  display: inline-block;
+  overflow: auto;
 }
 
 #roadview {
   width: 100%;
-  height: 360px;
+  max-width: 480px;
+  height: 480px;
+  display: inline-block;
+  overflow: auto;
 }
 </style>
