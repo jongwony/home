@@ -21,6 +21,9 @@ export default {
 #Interior {
   margin-top: 120px;
 }
+img {
+  image-orientation: from-image;
+}
 .vertical {
   margin: 0px 6px;
   max-width: 240px;
