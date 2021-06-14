@@ -2,13 +2,14 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark" fixed="top">
       <b-navbar-brand>
-        <router-link class="brand" to="/">Jongwony</router-link>
+        <span class="brand">Jongwony</span>
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav v-for="section in ['Gallery', 'Location', 'Interior', 'Recipes', 'Calendar']" :key="section">
+        <b-navbar-nav v-for="section in ['Gallery', 'Interior', 'Location', 'Recipes', 'BoardGame', 'Calendar']"
+                      :key="section">
           <b-nav-item :href="'#' + section">
             {{section}}
           </b-nav-item>

@@ -1,6 +1,7 @@
 <template>
   <div id="Recipes">
     <h1>🍽️ 요리를 좋아합니다.</h1>
+    <p>메인 / 사이드 요리, 칵테일을 제공해요</p>
     <hr>
     <div v-for="category in ['main', 'side', 'cocktail']" :key=category>
       <b-card-group v-for="(items, idx) in zipItem(category)" :key="idx" columns>
@@ -75,6 +76,12 @@ export default {
         footer: '비주얼은 이래도 맛있었음',
       },
       {
+        src: 'alio_olio.jpg',
+        title: '알리오 올리오',
+        description: '파스타 최고 아웃풋',
+        footer: '트러플 오일 있음',
+      },
+      {
         src: 'stir_fried_pork.jpg',
         title: '고추잡채',
         footer: '처음 했을 때도 평이 좋았음',
@@ -103,14 +110,14 @@ export default {
 }
 
 img {
-  max-width: 300px;
+  max-width: 240px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
 }
 
 .card-columns {
-  max-width: 300px;
+  max-width: 240px;
   padding: 20px;
   position: relative;
   display: inline-block;

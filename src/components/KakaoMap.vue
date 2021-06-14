@@ -1,6 +1,6 @@
 <template>
   <div id="Location">
-    <h1>🗺️ 오시는길</h1>
+    <h1>🗺️ 오시는 길</h1>
     <p>석촌고분역 1번 출구 - 근처에 다수의 따릉이가 있습니다.</p>
     <hr>
     <div id="map"/>
@@ -58,7 +58,7 @@ export default {
       this.homeInfoWindow = new kakao.maps.InfoWindow({zindex: 1});
 
       // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
-      this.homeInfoWindow.setContent('<div style="padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">송파구 삼전동 백제고분로 11-6</div>');
+      this.homeInfoWindow.setContent('<div style="padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">송파구 삼전동 백제고분로 31길 11-6</div>');
       this.homeInfoWindow.open(this.map, this.homeMarker);
 
       let roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div

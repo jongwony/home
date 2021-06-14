@@ -1,6 +1,7 @@
 <template>
   <div id="Calendar">
     <h1>📅 일정을 맞춰보아요</h1>
+    <p>예약 필수!</p>
     <hr>
     <div class="googleCalendar">
       <b-embed
@@ -20,8 +21,8 @@
 .googleCalendar{
   position: relative;
   height: 0;
-  width: 50%;
-  padding-bottom: 50%;
+  width: 90%;
+  padding-bottom: 90%;
   margin: auto;
 }
 

@@ -8,6 +8,7 @@
         <Drawing/>
         <KakaoMap/>
         <Recipes/>
+        <BoardGame/>
         <Calendar/>
       </div>
       <div class="col-lg"></div>
@@ -22,10 +23,12 @@ import Recipes from './components/Recipes.vue'
 import Calendar from './components/Calendar.vue'
 import Drawing from './components/Drawing.vue'
 import NavigationBar from './components/NavigationBar'
+import BoardGame from "@/components/BoardGame";
 
 export default {
   name: 'App',
   components: {
+    BoardGame,
     NavigationBar,
     Recipes,
     KakaoMap,
