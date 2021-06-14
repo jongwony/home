@@ -7,7 +7,7 @@
     <img class="vertical" alt="Bed Room" src="@/assets/bedroom.jpg">
     <img class="horizontal" alt="Yacht Dice" src="@/assets/living_room.jpg">
     <hr>
-    <img alt="Home Drawing" src="@/assets/drawing.png">
+    <img class="vertical" alt="Home Drawing" src="@/assets/drawing.png">
   </div>
 </template>
 
@@ -21,15 +21,16 @@ export default {
 #Interior {
   margin-top: 120px;
 }
-img {
-  margin: 32px;
-}
 .vertical {
-  max-width: 320px;
-  max-height: 480px;
+  margin: 0px 6px;
+  max-width: 240px;
+  max-height: 320px;
+  overflow: auto;
 }
 .horizontal {
-  max-width: 480px;
-  max-height: 320px;
+  margin: 12px 6px;
+  max-width: 320px;
+  max-height: 240px;
+  overflow: auto;
 }
 </style>

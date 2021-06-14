@@ -58,7 +58,7 @@ export default {
       this.homeInfoWindow = new kakao.maps.InfoWindow({zindex: 1});
 
       // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
-      this.homeInfoWindow.setContent('<div style="padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">송파구 삼전동 백제고분로 31길 11-6</div>');
+      this.homeInfoWindow.setContent('<div style="padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">송파구 삼전동 <br> 백제고분로 31길 11-6</div>');
       this.homeInfoWindow.open(this.map, this.homeMarker);
 
       let roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div
@@ -81,7 +81,7 @@ export default {
 
 #map {
   width: 100%;
-  max-width: 480px;
+  max-width: 360px;
   height: 480px;
   display: inline-block;
   overflow: auto;
@@ -89,7 +89,7 @@ export default {
 
 #roadview {
   width: 100%;
-  max-width: 480px;
+  max-width: 360px;
   height: 480px;
   display: inline-block;
   overflow: auto;
