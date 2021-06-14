@@ -25,14 +25,14 @@ img {
   image-orientation: from-image;
 }
 .vertical {
-  margin: 0px 6px;
+  margin: 6px 6px;
   max-width: 240px;
-  max-height: 320px;
+  max-height: 360px;
   overflow: auto;
 }
 .horizontal {
   margin: 12px 6px;
-  max-width: 320px;
+  max-width: 360px;
   max-height: 240px;
   overflow: auto;
 }
