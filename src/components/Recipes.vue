@@ -40,7 +40,26 @@ export default {
   },
   created() {
     let vm = this;
-    vm.cocktail = [];
+    vm.cocktail = [
+      {
+        src: 'cuba_libre.jpg',
+        title: '쿠바 리브레',
+        description: '럼 + 콜라 + 라임주스',
+        footer: '내가 좋아함',
+      },
+      {
+        src: 'fizz.jpg',
+        title: '피즈',
+        description: '럼 or 진 + 설탕 + 레몬주스 + 탄산수',
+        footer: '주 챔프임',
+      },
+      {
+        src: 'kahlua_milk.jpg',
+        title: '깔루아 밀크',
+        description: '깔루아 + 우유',
+        footer: '우유 대신 보드카 가능',
+      }
+    ];
     vm.side = [
       {
         src: 'liege_waffle.jpg',
@@ -51,7 +70,13 @@ export default {
       {
         src: 'cabbage_pickle.jpg',
         title: '배추 겉절이',
-        description: '우리아이 영양간식',
+        footer: '우리아이 영양간식',
+      },
+      {
+        src: 'truffle_scrambled_egg.jpg',
+        title: '양식 스크램블 에그',
+        description: '에그.. 트러플.. 생크림.. 환상',
+        footer: '촉촉쓰',
       },
     ];
     vm.main = [
@@ -82,9 +107,15 @@ export default {
         footer: '트러플 오일 있음',
       },
       {
+        src: 'carbonara.jpg',
+        title: '까르보나라',
+        description: '파스타 클래스에서 습득한 정통방식',
+        footer: '우유 안 들어감'
+      },
+      {
         src: 'stir_fried_pork.jpg',
         title: '고추잡채',
-        footer: '처음 했을 때도 평이 좋았음',
+        footer: '대용량.. 빠른 조리..',
       },
     ];
   },
