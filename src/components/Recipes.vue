@@ -40,26 +40,7 @@ export default {
   },
   created() {
     let vm = this;
-    vm.cocktail = [
-      {
-        src: 'cuba_libre.jpg',
-        title: '쿠바 리브레',
-        description: '럼 + 콜라 + 라임주스',
-        footer: '내가 좋아함',
-      },
-      {
-        src: 'fizz.jpg',
-        title: '피즈',
-        description: '럼 or 진 + 설탕 + 레몬주스 + 탄산수',
-        footer: '주 챔프임',
-      },
-      {
-        src: 'kahlua_milk.jpg',
-        title: '깔루아 밀크',
-        description: '깔루아 + 우유',
-        footer: '우유 대신 보드카 가능',
-      }
-    ];
+    vm.cocktail = [];
     vm.side = [
       {
         src: 'liege_waffle.jpg',
@@ -77,6 +58,12 @@ export default {
         title: '양식 스크램블 에그',
         description: '에그.. 트러플.. 생크림.. 환상',
         footer: '촉촉쓰',
+      },
+      {
+        src: 'soba.jpg',
+        title: '메밀소바',
+        description: '쯔유가 있어 빠릅니다',
+        footer: '낫또 커스텀 애정해'
       },
     ];
     vm.main = [
