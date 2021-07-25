@@ -104,6 +104,11 @@ export default {
         title: '고추잡채',
         footer: '대용량.. 빠른 조리..',
       },
+      {
+        src: 'dry_curry.jpeg',
+        title: '드라이 커리',
+        footer: '양파와 토마토의 PPAP'
+      },
     ];
   },
   methods: {
