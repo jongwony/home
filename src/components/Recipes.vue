@@ -109,6 +109,12 @@ export default {
         title: '드라이 커리',
         footer: '양파와 토마토의 PPAP'
       },
+      {
+        src: 'chicken_soysauce.jpeg',
+        title: '간장 닭조림',
+        description: '승우아빠의 닭이 아니라 김치 영상에 있다고 한다',
+        footer: 'ㄹㅇ 밥도둑'
+      },
     ];
   },
   methods: {
