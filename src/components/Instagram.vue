@@ -40,9 +40,6 @@ export default {
   created() {
     let vm = this;
     let instagram_url = 'https://9e240d7v0k.execute-api.ap-northeast-2.amazonaws.com/api/instagram'
-    if (process.env.NODE_ENV === 'development') {
-      instagram_url = 'http://localhost:8000/instagram'
-    }
     this.$http
         .get(instagram_url)
         .then(function (response) {
