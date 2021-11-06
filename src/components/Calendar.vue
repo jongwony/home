@@ -1,13 +1,18 @@
 <template>
   <div id="Calendar">
-    <h1>📅 일정을 맞춰보아요</h1>
-    <p>예약 필수!</p>
+    <h1>📅 날 잡자</h1>
+    <a href="//open.kakao.com/o/sAAucdcd">
+      <img class="logo" alt="Kakao" src="@/assets/kakao.webp">
+    </a>
+    <a href="//www.instagram.com/jongwony_/">
+      <img class="logo" alt="Instagram" src="@/assets/Instagram_AppIcon_Aug2017.webp">
+    </a>
     <hr>
     <div class="googleCalendar">
       <b-embed
           type="iframe"
           aspect="embed-responsive-4by3"
-          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FSeoul&amp;src=bGFzdG9uZTkxODJAZ21haWwuY29t&amp;src=MGpmMTg4MzJ1MDZnMGRmZzNsMmJ0Z29wY3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23B39DDB&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showCalendars=0"
+          src="//calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FSeoul&amp;src=bGFzdG9uZTkxODJAZ21haWwuY29t&amp;src=MGpmMTg4MzJ1MDZnMGRmZzNsMmJ0Z29wY3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23B39DDB&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showCalendars=0"
       ></b-embed>
     </div>
   </div>
@@ -32,6 +37,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.logo {
+  width: 32px;
+  margin: 8px;
 }
 
 #Calendar {

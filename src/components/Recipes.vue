@@ -51,9 +51,6 @@
                 c[c.length - 1].push(n);
                 return c;
               }, []);
-            },
-            capitalizeFirstLetter(string) {
-              return string.charAt(0).toUpperCase() + string.slice(1);
             }
         }
     }
