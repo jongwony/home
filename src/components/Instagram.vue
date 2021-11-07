@@ -18,6 +18,7 @@
                           :img-src="image['media_url']"></b-carousel-slide>
       </b-carousel>
     </section>
+    <small>Instagram #home 태그와 연결되었습니다</small>
   </div>
 </template>
 
