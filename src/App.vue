@@ -1,17 +1,13 @@
 <template>
   <div id="app">
     <NavigationBar/>
-    <div class="row">
-      <div class="col-lg"></div>
-      <div class="col-lg-10">
-        <Instagram/>
-        <Drawing/>
-        <KakaoMap/>
-        <Recipes/>
-        <BoardGame/>
-        <Calendar/>
-      </div>
-      <div class="col-lg"></div>
+    <div>
+      <Instagram/>
+      <Drawing/>
+      <KakaoMap/>
+      <Recipes/>
+      <BoardGame/>
+      <Calendar/>
     </div>
   </div>
 </template>

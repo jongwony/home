@@ -4,13 +4,13 @@
     <p>여러가지 보드게임이 있고 빔 프로젝트로 닌텐도를 할 수 있어요</p>
     <hr>
     <div v-for="category in ['board_game', 'nintendo']" :key=category>
-      <b-card-group v-for="(items, idx) in zipItem(category)" :key="idx" columns>
+      <b-card-group v-for="(items, idx) in zipItem(category)" :key="idx" deck>
         <b-card
             v-for="item in items" :key=item.src
             :img-src="require(`@/assets/${item.src}`)"
             :bg-variant="item.signature ? item.signature : undefined"
             :text-variant="item.signature ? 'white' : undefined"
-            class="mb-3"
+            class="d-inline-flex"
         >
           <b-card-title>{{ item.title }}</b-card-title>
           <b-card-sub-title v-if="item.subtitle" :sub-title-text-variant="item.signature ? 'secondary' : undefined">
@@ -78,7 +78,7 @@ export default {
     zipItem(category) {
       return this[category].reduce((c, n, i) => {
         console.log(c, n, i)
-        if (i % (Math.ceil(this[category].length / 3)) === 0) c.push([]);
+        if (i % 3 === 0) c.push([]);
         c[c.length - 1].push(n);
         return c;
       }, []);
@@ -95,20 +95,8 @@ export default {
   margin-top: 120px;
 }
 
-img {
-  padding: 20px;
+.card {
+  margin: 20px;
   max-width: 240px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
 }
-
-.card-columns {
-  max-width: 240px;
-  padding: 20px;
-  position: relative;
-  display: inline-block;
-  overflow: auto;
-}
-
 </style>

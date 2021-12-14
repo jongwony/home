@@ -4,14 +4,9 @@
     <section>
       <b-carousel
           v-model="slide"
-          :interval="5000"
+          :interval="4500"
           fade
-          controls
-          indicators
-          background="#ababab"
           style="text-shadow: 1px 1px 2px #333;"
-          @sliding-start="onSlideStart"
-          @sliding-end="onSlideEnd"
       >
         <!-- v-bind in attributes -->
         <b-carousel-slide v-for="image in images" :key="image['media_url']" :text="image.caption"
@@ -49,16 +44,7 @@ export default {
           )
         });
   },
-  methods: {
-    onSlideStart(slide) {
-      console.log(slide)
-      this.sliding = true
-    },
-    onSlideEnd(slide) {
-      console.log(slide)
-      this.sliding = false
-    }
-  }
+  methods: {}
 }
 </script>
 

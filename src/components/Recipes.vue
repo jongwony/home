@@ -3,23 +3,20 @@
     <h1>🍽️ Cooking Diary</h1>
     <small>Instagram #cooking 태그와 연결 되었습니다</small>
     <hr>
-    <div>
-      <b-card-group v-for="(items, idx) in zipItem(images)" :key="idx" columns>
-        <b-card
-            v-for="image in items" :key=image.media_url
-            :img-src="image.media_url"
-            class="mb-3"
-        >
-          <b-card-text>
-            {{ image.caption }}
-          </b-card-text>
-          <template #footer v-if="image.timestamp">
-            <small class="text-muted">{{ localDate(image.timestamp) }}</small>
-          </template>
-
-        </b-card>
-      </b-card-group>
-    </div>
+    <b-card-group  v-for="(items, idx) in zipItem(images)" :key="idx" deck>
+      <b-card
+          v-for="image in items" :key=image.media_url
+          :img-src="image.media_url"
+          class="d-inline-flex"
+      >
+        <b-card-text>
+          {{ image.caption }}
+        </b-card-text>
+        <template #footer v-if="image.timestamp">
+          <small class="text-muted">{{ localDate(image.timestamp) }}</small>
+        </template>
+      </b-card>
+    </b-card-group>
   </div>
 </template>
 
@@ -51,7 +48,7 @@ export default {
     zipItem(items) {
       return items.reduce((c, n, i) => {
         console.log(c, n, i)
-        if (i % (Math.ceil(items.length / 3)) === 0) c.push([]);
+        if (i % 3 === 0) c.push([]);
         c[c.length - 1].push(n);
         return c;
       }, []);
@@ -70,19 +67,9 @@ export default {
   margin-top: 120px;
 }
 
-img {
+.card {
+  margin: 20px;
   max-width: 240px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card-columns {
-  max-width: 240px;
-  padding: 20px;
-  position: relative;
-  display: inline-block;
-  overflow: auto;
 }
 
 </style>
