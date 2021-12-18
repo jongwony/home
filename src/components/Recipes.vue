@@ -66,10 +66,4 @@ export default {
 #Recipes {
   margin-top: 120px;
 }
-
-.card {
-  margin: 20px;
-  max-width: 240px;
-}
-
 </style>

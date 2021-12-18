@@ -8,8 +8,6 @@
         <b-card
             v-for="item in items" :key=item.src
             :img-src="require(`@/assets/${item.src}`)"
-            :bg-variant="item.signature ? item.signature : undefined"
-            :text-variant="item.signature ? 'white' : undefined"
             class="d-inline-flex"
         >
           <b-card-title>{{ item.title }}</b-card-title>
@@ -93,10 +91,5 @@ export default {
 <style scoped>
 #BoardGame {
   margin-top: 120px;
-}
-
-.card {
-  margin: 20px;
-  max-width: 240px;
 }
 </style>

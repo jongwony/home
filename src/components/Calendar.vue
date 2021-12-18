@@ -12,7 +12,7 @@
       <b-embed
           type="iframe"
           aspect="embed-responsive-4by3"
-          src="//calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FSeoul&amp;src=bGFzdG9uZTkxODJAZ21haWwuY29t&amp;src=MGpmMTg4MzJ1MDZnMGRmZzNsMmJ0Z29wY3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23B39DDB&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showCalendars=0"
+          src="//calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%232d2d30&amp;ctz=Asia%2FSeoul&amp;src=bGFzdG9uZTkxODJAZ21haWwuY29t&amp;src=MGpmMTg4MzJ1MDZnMGRmZzNsMmJ0Z29wY3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23B39DDB&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showCalendars=0"
       ></b-embed>
     </div>
   </div>
