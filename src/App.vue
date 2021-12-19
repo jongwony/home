@@ -65,6 +65,6 @@ export default {
   text-align: center;
   color: var(--text-primary-color);
   background-color: var(--background-color-primary);
-  margin-top: 60px;
+  margin-top: 55px;
 }
 </style>

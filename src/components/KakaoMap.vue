@@ -32,8 +32,9 @@ export default {
   },
   methods: {
     initMap() {
-      let home = new kakao.maps.LatLng(37.503866433821464, 127.09514153848163);
-      let center = new kakao.maps.LatLng(37.50318539280487, 127.09610763126503);
+      // let home = new kakao.maps.LatLng(37.503866433821464, 127.09514153848163);
+      let home = new kakao.maps.LatLng(37.50386, 127.09518);
+      let center = new kakao.maps.LatLng(37.50318, 127.0961);
 
       let mapContainer = document.getElementById('map'), // 지도를 표시할 div
           mapOption = {
@@ -85,6 +86,7 @@ export default {
   height: 480px;
   display: inline-block;
   overflow: auto;
+  color: #333333;
 }
 
 #roadview {

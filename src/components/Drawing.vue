@@ -6,8 +6,6 @@
     <img class="vertical" alt="Living Room" src="@/assets/kitchen.jpg">
     <img class="vertical" alt="Bed Room" src="@/assets/bedroom.jpg">
     <img class="horizontal" alt="Yacht Dice" src="@/assets/living_room.jpg">
-    <hr>
-    <img class="vertical" alt="Home Drawing" src="@/assets/drawing.png">
   </div>
 </template>
 
