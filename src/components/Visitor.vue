@@ -6,7 +6,7 @@
     <p>가장 자주 방문한 사람은 {{data.max_visitor}}번 방문했어요!</p>
     <hr>
     <div v-for="(value, key) in data.date_group" :key="key">
-      <p>{{key}}엔 총 {{value}}번 방문했어요!</p>
+      <p>{{key}}엔 총 {{value}}명 방문했어요!</p>
     </div>
     <hr>
     <div v-for="(value, key) in data.category_group" :key="key">
