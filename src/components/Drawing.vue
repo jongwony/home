@@ -4,7 +4,6 @@
     <p>아일랜드 2인 - 거실 4인이 적당해요</p>
     <hr>
     <img class="vertical" alt="Living Room" src="@/assets/kitchen.jpg">
-    <img class="vertical" alt="Bed Room" src="@/assets/bedroom.jpg">
     <img class="horizontal" alt="Yacht Dice" src="@/assets/living_room.jpg">
   </div>
 </template>
