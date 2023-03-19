@@ -4,7 +4,7 @@
     <p>석촌고분역 1번 출구 - 근처에 다수의 따릉이가 있습니다.</p>
     <hr>
     <div id="map" />
-    <div id="roadview" />
+    <!-- <div id="roadview" /> -->
   </div>
 </template>
 
@@ -106,14 +106,14 @@ export default {
       this.homeInfoWindow.setContent('<div style="padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">송파구 삼전동 <br> 백제고분로 31길 11-6</div>');
       this.homeInfoWindow.open(this.map, this.homeMarker);
 
-      let roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div
-      let roadview = new kakao.maps.Roadview(roadviewContainer); //로드뷰 객체
-      let roadviewClient = new kakao.maps.RoadviewClient(); //좌표로부터 로드뷰 파노ID를 가져올 로드뷰 helper객체
+      // let roadviewContainer = document.getElementById('roadview'); //로드뷰를 표시할 div
+      // let roadview = new kakao.maps.Roadview(roadviewContainer); //로드뷰 객체
+      // let roadviewClient = new kakao.maps.RoadviewClient(); //좌표로부터 로드뷰 파노ID를 가져올 로드뷰 helper객체
 
-      // 특정 위치의 좌표와 가까운 로드뷰의 panoId를 추출하여 로드뷰를 띄운다.
-      roadviewClient.getNearestPanoId(home, 50, function (panoId) {
-        roadview.setPanoId(panoId, home); //panoId와 중심좌표를 통해 로드뷰 실행
-      });
+      // // 특정 위치의 좌표와 가까운 로드뷰의 panoId를 추출하여 로드뷰를 띄운다.
+      // roadviewClient.getNearestPanoId(home, 50, function (panoId) {
+      //   roadview.setPanoId(panoId, home); //panoId와 중심좌표를 통해 로드뷰 실행
+      // });
 
       this.seoulBike(this.map);
     },
@@ -128,7 +128,7 @@ export default {
 
 #map {
   width: 100%;
-  max-width: 360px;
+  max-width: 640px;
   height: 480px;
   display: inline-block;
   overflow: auto;

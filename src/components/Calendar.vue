@@ -1,6 +1,8 @@
 <template>
   <div id="Calendar">
-    <h1>📅 날 잡자</h1>
+    <h1>📅 날짜를 잡아봐요</h1>
+    <p>Since 2021. 4. 27</p>
+    <p>DM 주세요 :)</p>
     <a href="//open.kakao.com/o/sAAucdcd">
       <img class="logo" alt="Kakao" src="@/assets/kakao.webp">
     </a>

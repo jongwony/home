@@ -1,7 +1,7 @@
 <template>
   <div id="BoardGame">
     <h1>🎲 놀거리</h1>
-    <p>여러가지 보드게임이 있고 빔 프로젝트로 닌텐도를 할 수 있어요</p>
+    <p>여러가지 보드게임이 있고 닌텐도를 할 수 있어요</p>
     <hr>
     <div v-for="category in ['board_game', 'nintendo']" :key=category>
       <b-card-group v-for="(items, idx) in zipItem(category)" :key="idx" deck>
@@ -48,7 +48,13 @@ export default {
       {
         src: 'mario_party.jpg',
         title: '슈퍼 마리오 파티',
-        footer: '2~4인 게임(조이콘 필요)',
+        footer: '2~4인 게임',
+      },
+      {
+        src: 'supersmashbrothers.png',
+        title: '슈퍼스매시브라더스 얼티밋',
+        description: '정신없는 단체 격투 게임!',
+        footer: '최대 8인 게임(조이콘 추가 필요)',
       },
     ];
     vm.board_game = [

@@ -7,7 +7,6 @@
       <KakaoMap/>
       <Recipes/>
       <BoardGame/>
-      <Visitor/>
       <Calendar/>
     </div>
   </div>
@@ -21,12 +20,10 @@ import Calendar from './components/Calendar.vue'
 import Drawing from './components/Drawing.vue'
 import NavigationBar from './components/NavigationBar'
 import BoardGame from "./components/BoardGame"
-import Visitor from "./components/Visitor";
 
 export default {
   name: 'App',
   components: {
-    Visitor,
     BoardGame,
     NavigationBar,
     Recipes,
