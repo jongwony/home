@@ -3,14 +3,43 @@
     <h1>🏠 소개합니다</h1>
     <p>아일랜드 2인 - 거실 4인이 적당해요</p>
     <hr>
-    <img class="vertical" alt="Living Room" src="@/assets/kitchen.jpg">
-    <img class="horizontal" alt="Yacht Dice" src="@/assets/living_room.jpg">
+
+    <div style="line-height: 0;">
+      <div class="grid" v-for="(image, idx) in images" :key="idx">
+        <img :key="idx" :src="image['media_url']" :alt="image.caption">
+      </div>
+    </div>
+    <small>Instagram #interior 태그와 연결되었습니다</small>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Drawing"
+  name: "Drawing",
+  data() {
+    return {
+      slide: 0,
+      sliding: null,
+      props: {
+        caption: String,
+        text: String,
+        'img-src': String,
+      },
+      embeds: [],
+      images: []
+    }
+  },
+  created() {
+    let vm = this;
+    let instagram_url = 'https://9e240d7v0k.execute-api.ap-northeast-2.amazonaws.com/api/instagram'
+    this.$http
+      .get(instagram_url)
+      .then(function (response) {
+        vm.images = response.data.filter(
+          x => x.caption && x.media_type !== 'VIDEO' && x.caption.includes('#interior')
+        )
+      });
+  },
 }
 </script>
 
@@ -18,19 +47,17 @@ export default {
 #Interior {
   margin-top: 120px;
 }
+
+.grid {
+  display: inline-flex;
+  line-height: 0;
+  /* create n columns */
+}
+
 img {
   image-orientation: from-image;
-}
-.vertical {
-  margin: 6px 6px;
-  max-width: 240px;
-  max-height: 360px;
-  overflow: auto;
-}
-.horizontal {
-  margin: 12px 6px;
-  max-width: 360px;
-  max-height: 240px;
-  overflow: auto;
+  height: auto;
+  max-width: 160px;
+  vertical-align: middle;
 }
 </style>

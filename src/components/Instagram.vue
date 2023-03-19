@@ -52,7 +52,7 @@ export default {
 
 #Gallery {
   margin: auto;
-  max-width: 800px;
+  max-width: 640px;
 }
 
 .about-section h1 {
