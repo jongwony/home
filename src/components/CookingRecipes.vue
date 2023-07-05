@@ -1,5 +1,5 @@
 <template>
-  <div id="Recipes">
+  <div id="CookingRecipes">
     <h1>🍽️ Cooking Diary</h1>
     <small>Instagram #cooking 태그와 연결 되었습니다</small>
     <hr>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "Recipes",
+  name: "CookingRecipes",
   data() {
     return {
       images: []

@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "Drawing",
+  name: "InteriorDrawing",
   data() {
     return {
       slide: 0,

@@ -2,22 +2,22 @@
   <div id="app">
     <NavigationBar/>
     <div>
-      <Instagram/>
-      <Drawing/>
+      <InstagramFetch/>
+      <InteriorDrawing/>
       <KakaoMap/>
-      <Recipes/>
+      <CookingRecipes/>
       <BoardGame/>
-      <Calendar/>
+      <GoogleCalendar/>
     </div>
   </div>
 </template>
 
 <script>
 import KakaoMap from './components/KakaoMap.vue'
-import Instagram from './components/Instagram.vue'
-import Recipes from './components/Recipes.vue'
-import Calendar from './components/Calendar.vue'
-import Drawing from './components/Drawing.vue'
+import InstagramFetch from './components/InstagramFetch.vue'
+import CookingRecipes from './components/CookingRecipes.vue'
+import GoogleCalendar from './components/GoogleCalendar.vue'
+import InteriorDrawing from './components/InteriorDrawing.vue'
 import NavigationBar from './components/NavigationBar'
 import BoardGame from "./components/BoardGame"
 
@@ -26,11 +26,11 @@ export default {
   components: {
     BoardGame,
     NavigationBar,
-    Recipes,
+    CookingRecipes,
     KakaoMap,
-    Instagram,
-    Calendar,
-    Drawing,
+    InstagramFetch,
+    GoogleCalendar,
+    InteriorDrawing,
   }
 }
 </script>

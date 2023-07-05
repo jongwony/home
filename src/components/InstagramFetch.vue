@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "Instagram",
+  name: "InstagramFetch",
   data() {
     return {
       slide: 0,

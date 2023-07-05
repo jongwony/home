@@ -1,5 +1,5 @@
 <template>
-  <div id="Calendar">
+  <div id="GoogleCalendar">
     <h1>📅 날짜를 잡아봐요</h1>
     <p>Since 2021. 4. 27</p>
     <p>DM 주세요 :)</p>
